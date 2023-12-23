@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sekolah.LoginSiswaController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="293.0" layoutX="394.0" layoutY="27.0">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="176.0" layoutY="204.0" prefHeight="53.0" prefWidth="728.0" text="Selamat Datang di Portal Pembayaran SPP">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="360.0" prefHeight="42.0" prefWidth="480.0" text="Nomor Induk Siswa Nasional">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fNisn" layoutX="301.0" layoutY="402.0" prefHeight="42.0" prefWidth="480.0" promptText="NISN" style="-fx-background-radius: 8;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bLogin" layoutX="552.0" layoutY="478.0" mnemonicParsing="false" onAction='#Login' prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #508D69; -fx-background-radius: 8;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bAdministrator" layoutX="301.0" layoutY="478.0" mnemonicParsing="false" onAction="#Administrator" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #508D69; -fx-border-radius: 8;" text="Administrator" textFill="#508d69">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

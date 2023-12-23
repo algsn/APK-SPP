@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sekolah.DataSPPController">
+   <children>
+      <Rectangle fill="#003944" height="660.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="220.0" />
+      <Rectangle fill="#175562" height="60.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="1080.0" />
+      <Button fx:id="bPetugas" alignment="TOP_LEFT" layoutY="170.0" mnemonicParsing="false" onAction="#openDataPetugas" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #003944; -fx-background-radius: 0;" text="Data Petugas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bSiswa" alignment="TOP_LEFT" layoutY="133.0" mnemonicParsing="false" onAction="#openDataSiswa" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #003944; -fx-background-radius: 0;" text="Data Siswa" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="lTitle" alignment="CENTER" layoutY="60.0" prefHeight="50.0" prefWidth="220.0" text="Menu Petugas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets top="12.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lWelcome" layoutX="232.0" layoutY="13.0" prefHeight="35.0" prefWidth="599.0" text="Hallo, Petugas!" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="bLogout" layoutX="966.0" layoutY="12.0" mnemonicParsing="false" onAction="#Logout" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #508D69; -fx-background-radius: 8;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bKelas" alignment="TOP_LEFT" layoutY="207.0" mnemonicParsing="false" onAction="#openDataKelas" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #003944; -fx-background-radius: 0;" text="Data Kelas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bSpp" alignment="TOP_LEFT" layoutY="244.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #618288; -fx-background-radius: 0;" text="Data SPP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bPembayaran" alignment="TOP_LEFT" layoutY="281.0" mnemonicParsing="false" onAction="#openPembayaran" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #003944; -fx-background-radius: 0;" text="Pembayaran" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bHistory" alignment="TOP_LEFT" layoutY="318.0" mnemonicParsing="false" onAction="#openHistoryPembayaran" prefHeight="37.0" prefWidth="220.0" style="-fx-background-color: #003944; -fx-background-radius: 0;" text="History Pembayaran" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tvDataSPP" layoutX="246.0" layoutY="292.0" prefHeight="422.0" prefWidth="828.0">
+         <columns>
+            <TableColumn fx:id="cIdSPP" prefWidth="160.7999267578125" text="ID SPP" />
+            <TableColumn fx:id="cTahun" minWidth="0.0" prefWidth="291.2000732421875" text="Tahun" />
+            <TableColumn fx:id="cNominal" prefWidth="376.800048828125" text="Nominal" />
+         </columns>
+      </TableView>
+      <TextField fx:id="tTahunEdit" layoutX="246.0" layoutY="216.0" prefHeight="26.0" prefWidth="330.0" promptText="Tahun">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tNominalEdit" layoutX="587.0" layoutY="216.0" prefHeight="25.0" prefWidth="330.0" promptText="Nominal">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bEditSPP" layoutX="930.0" layoutY="216.0" mnemonicParsing="false" onAction="#editSPP" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #508D69;" text="Edit SPP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tNominalAdd" layoutX="708.0" layoutY="179.0" prefHeight="25.0" prefWidth="210.0" promptText="Nominal">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bTambahSPP" layoutX="930.0" layoutY="179.0" mnemonicParsing="false" onAction="#addSPP" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #508D69;" text="Tambah SPP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tIdSPPAdd" layoutX="246.0" layoutY="179.0" prefHeight="26.0" prefWidth="162.0" promptText="ID SPP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tTahunAdd" layoutX="419.0" layoutY="179.0" prefHeight="25.0" prefWidth="280.0" promptText="Tahun">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bDeleteSPP" layoutX="246.0" layoutY="253.0" mnemonicParsing="false" onAction="#deleteSPP" prefHeight="25.0" prefWidth="828.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #508D69; -fx-border-radius: 2;" text="Hapus SPP" textFill="#508d69">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tSPPSearch" layoutX="246.0" layoutY="143.0" prefHeight="26.0" prefWidth="672.0" promptText="Cari SPP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bCariSPP" layoutX="930.0" layoutY="143.0" mnemonicParsing="false" onAction="#searchSPP" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #508D69;" text="Cari SPP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lTitle2" layoutX="244.0" layoutY="70.0" prefHeight="50.0" prefWidth="410.0" text="Data SPP">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets top="12.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
